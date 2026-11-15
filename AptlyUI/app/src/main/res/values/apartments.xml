@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Text for the 6 sample apartments (Dashboard, Favorites, Apartment details).
+     Order everywhere: 1 Aurora Hill, 2 Trancoville, 3 Leonila Hill, 4 Bayan Park, 5 La Trinidad, 6 Gov. Pack.
+     Numbers (price, bedrooms, rating, furnishing, pets, parking, lease types) are in Apartment.java;
+     keep the descriptions in line with them. -->
+<resources>
+
+    <!-- ===== Text patterns ===== -->
+    <string name="apartment_title">Apartment in %s</string>
+    <!-- host, area: e.g. "Mommy Oni, Homes, Bayan Park" -->
+    <string name="apartment_subtitle">%1$s, Homes, %2$s</string>
+    <!-- e.g. "₱15,000" -->
+    <string name="apartment_price">₱%1$,d</string>
+    <!-- price, bedrooms: e.g. "₱15,000/mo · 3 bedrooms" -->
+    <string name="apartment_summary">%1$s/mo · %2$s</string>
+    <plurals name="apartment_bedrooms">
+        <item quantity="one">%d bedroom</item>
+        <item quantity="other">%d bedrooms</item>
+    </plurals>
+
+    <!-- ===== Areas ===== -->
+    <string name="area_aurora_hill">Aurora Hill</string>
+    <string name="area_trancoville">Trancoville</string>
+    <string name="area_leonila_hill">Leonila Hill</string>
+    <string name="area_bayan_park">East Bayan Park</string>
+    <string name="area_la_trinidad">La Trinidad</string>
+    <string name="area_gov_pack">Gov. Pack</string>
+
+    <!-- ===== Hosts ===== -->
+    <string name="host_aurora_hill">Pacquiao</string>
+    <string name="host_trancoville">Busseng</string>
+    <string name="host_leonila_hill">24Chicken</string>
+    <string name="host_bayan_park">Mommy Oni</string>
+    <string name="host_la_trinidad">Sakading</string>
+    <string name="host_gov_pack">Padungking</string>
+
+    <!-- ===== Descriptions ===== -->
+    <string name="desc_aurora_hill">Semi-furnished 1-bedroom apartment in Aurora Hill, Baguio City. It comes with a bed, a dining table and kitchen cabinets, and gets plenty of morning sun. Pets are allowed. There is no on-site parking, but street parking is nearby. Long-term and month-to-month contracts are available. A short walk to jeepney stops and a public market.</string>
+    <string name="desc_trancoville">Fully furnished 2-bedroom apartment in Trancoville, Baguio City. It has a sofa set, beds, a refrigerator, a stove and a washing machine, so you can move in right away. Pets are not allowed. Comes with an on-site parking slot. Long-term and fixed-term contracts are available. Close to schools, a church and a supermarket.</string>
+    <string name="desc_leonila_hill">Unfurnished 1-bedroom apartment in Leonila Hill, Baguio City. A simple, quiet unit that is great for students or a single working professional. Pets are allowed. No on-site parking. Short-term and month-to-month contracts are available. Near jeepney routes, sari-sari stores and a few cafés.</string>
+    <string name="desc_bayan_park">Fully furnished 3-bedroom apartment in East Bayan Park, Baguio City. It has a bright living area, a kitchen with a stove and refrigerator, and its own laundry space. Pets are allowed and there is an on-site parking area. Long-term and lease-to-own contracts are available. Near jeepney routes, sari-sari stores and schools.</string>
+    <string name="desc_la_trinidad">Unfurnished 2-bedroom apartment in La Trinidad, Benguet. A roomy unit with a small balcony and a view of the valley. Pets are not allowed. Has an on-site parking area. Short-term and fixed-term contracts are available. Close to the strawberry farm, the town hall and Benguet State University.</string>
+    <string name="desc_gov_pack">Semi-furnished 2-bedroom apartment along Gov. Pack Road, Baguio City. It comes with beds, a dining set and a gas stove. Pets are allowed. No on-site parking. Month-to-month and fixed-term contracts are available. Walking distance to Session Road, Burnham Park and several universities.</string>
+
+    <!-- ===== Juan D.'s guest review (his stars are in Apartment.java) ===== -->
+    <string name="review_aurora_hill">Clean and quiet place. The owner was easy to talk to and fixed things quickly. Would rent here again.</string>
+    <string name="review_trancoville">Everything we needed was already there, so moving in took one afternoon. The parking slot is a big plus.</string>
+    <string name="review_leonila_hill">Small but cozy and very affordable. It gets a bit cold at night, so bring extra blankets.</string>
+    <string name="review_bayan_park">Spacious and the furniture is nice, but the water pressure is weak in the mornings. The owner said it will be fixed soon.</string>
+    <string name="review_la_trinidad">Great view from the balcony. It\'s a bit far from the main road, so expect a longer commute.</string>
+    <string name="review_gov_pack">Great location, I could walk to school. Some street noise during the day but quiet at night.</string>
+
+    <!-- ===== Lists in card order (read by Apartment.java) ===== -->
+    <string-array name="apartment_areas">
+        <item>@string/area_aurora_hill</item>
+        <item>@string/area_trancoville</item>
+        <item>@string/area_leonila_hill</item>
+        <item>@string/area_bayan_park</item>
+        <item>@string/area_la_trinidad</item>
+        <item>@string/area_gov_pack</item>
+    </string-array>
+
+    <string-array name="apartment_hosts">
+        <item>@string/host_aurora_hill</item>
+        <item>@string/host_trancoville</item>
+        <item>@string/host_leonila_hill</item>
+        <item>@string/host_bayan_park</item>
+        <item>@string/host_la_trinidad</item>
+        <item>@string/host_gov_pack</item>
+    </string-array>
+
+    <string-array name="apartment_descriptions">
+        <item>@string/desc_aurora_hill</item>
+        <item>@string/desc_trancoville</item>
+        <item>@string/desc_leonila_hill</item>
+        <item>@string/desc_bayan_park</item>
+        <item>@string/desc_la_trinidad</item>
+        <item>@string/desc_gov_pack</item>
+    </string-array>
+
+    <string-array name="apartment_reviews">
+        <item>@string/review_aurora_hill</item>
+        <item>@string/review_trancoville</item>
+        <item>@string/review_leonila_hill</item>
+        <item>@string/review_bayan_park</item>
+        <item>@string/review_la_trinidad</item>
+        <item>@string/review_gov_pack</item>
+    </string-array>
+</resources>

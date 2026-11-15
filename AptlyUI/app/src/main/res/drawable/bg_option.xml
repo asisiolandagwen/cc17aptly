@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Selected option: green border, light green fill -->
+    <item android:state_selected="true">
+        <shape>
+            <solid android:color="#E3F2EA" />
+            <stroke android:width="1.5dp" android:color="@color/button_green" />
+            <corners android:radius="7dp" />
+        </shape>
+    </item>
+    <!-- Normal option: white with dark outline -->
+    <item>
+        <shape>
+            <solid android:color="#FFFFFF" />
+            <stroke android:width="1dp" android:color="#333333" />
+            <corners android:radius="7dp" />
+        </shape>
+    </item>
+</selector>

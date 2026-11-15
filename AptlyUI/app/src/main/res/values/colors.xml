@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Colors sampled from the Apt.ly prototype -->
+    <color name="background">#F6FFF9</color>
+    <color name="button_green">#0E7448</color>
+    <color name="green_dark">#376953</color>
+    <color name="sage">#9CAF88</color>
+    <color name="teal">#045D61</color>
+    <color name="lavender">#C8D1D9</color>
+    <color name="input_stroke">#7B807C</color>
+    <color name="text_black">#111111</color>
+    <color name="text_gray">#6E6E6E</color>
+    <color name="text_light">#A3A3A3</color>
+    <color name="divider">#E6ECE8</color>
+    <color name="nav_bg">#F0F3F1</color>
+    <color name="nav_icon">#3F4441</color>
+    <color name="nav_selected">#1D7D53</color>
+    <color name="white">#FFFFFF</color>
+</resources>

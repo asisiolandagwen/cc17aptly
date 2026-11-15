@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Screen 1: Welcome / Select User Type -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:contentDescription="@null"
+        android:scaleType="centerCrop"
+        android:src="@drawable/welcome_pattern_top" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingTop="64dp"
+        android:paddingBottom="99dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-black"
+            android:text="Welcome!"
+            android:textColor="@color/green_dark"
+            android:textSize="30sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="Select User Type"
+            android:textColor="@color/green_dark"
+            android:textSize="15sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="44dp"
+            android:orientation="horizontal">
+
+            <!-- Tenant -->
+            <LinearLayout
+                android:id="@+id/btn_tenant"
+                android:layout_width="121dp"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="121dp"
+                    android:layout_height="117dp"
+                    android:background="@drawable/bg_tile_tenant"
+                    android:foreground="@drawable/ripple_tile" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="26dp"
+                    android:text="Tenant"
+                    android:textColor="@color/green_dark"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <!-- Homeowner -->
+            <LinearLayout
+                android:id="@+id/btn_homeowner"
+                android:layout_width="121dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="45dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="121dp"
+                    android:layout_height="117dp"
+                    android:background="@drawable/bg_tile_homeowner"
+                    android:foreground="@drawable/ripple_tile" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:text="Homeowner"
+                    android:textColor="@color/green_dark"
+                    android:textSize="15sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:contentDescription="@null"
+        android:scaleType="centerCrop"
+        android:src="@drawable/welcome_pattern_bottom" />
+</LinearLayout>

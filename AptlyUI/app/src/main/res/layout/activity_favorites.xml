@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Screen 11a: FAVORITES tab -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:paddingBottom="110dp"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="23dp"
+            android:paddingTop="56dp"
+            android:paddingEnd="23dp">
+
+            <!-- Title -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Favorites"
+                android:textColor="@color/text_black"
+                android:textSize="21sp"
+                android:textStyle="bold" />
+
+            <!-- Favorite apartments: one card per apartment (same order as the Dashboard).
+                 Only the hearted ones are shown; the code arranges them 2 per row. -->
+            <LinearLayout
+                android:id="@+id/fav_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="34dp"
+                android:orientation="vertical">
+
+                <!-- Row 1 -->
+                <LinearLayout android:id="@+id/fav_row_1" style="@style/Aptly.CardRow" android:layout_marginTop="0dp">
+                    <!-- Favorite 1: Aurora Hill -->
+                    <LinearLayout
+                        android:id="@+id/fav_card_1"
+                        style="@style/Aptly.Card">
+                        <FrameLayout style="@style/Aptly.CardPhotoFrame">
+                            <ImageView android:id="@+id/fav_photo_1" style="@style/Aptly.CardPhoto" android:src="@drawable/apt_1" />
+                            <ImageView android:id="@+id/fav_heart_1" style="@style/Aptly.CardHeart" />
+                        </FrameLayout>
+                        <TextView style="@style/Aptly.CardTitle" android:text="Apartment in Aurora Hill" />
+                        <LinearLayout style="@style/Aptly.CardInfoRow">
+                            <TextView style="@style/Aptly.CardSubtitle" android:text="Pacquiao, Homes" />
+                            <TextView style="@style/Aptly.CardRating" android:text="★ 5.00" />
+                        </LinearLayout>
+                        <TextView android:id="@+id/fav_price_1" style="@style/Aptly.CardPrice" android:text="₱8,500/mo · 1 bedroom" />
+                    </LinearLayout>
+                    <!-- Favorite 2: Trancoville -->
+                    <LinearLayout
+                        android:id="@+id/fav_card_2"
+                        style="@style/Aptly.Card"
+                        android:layout_marginStart="16dp">
+                        <FrameLayout style="@style/Aptly.CardPhotoFrame">
+                            <ImageView android:id="@+id/fav_photo_2" style="@style/Aptly.CardPhoto" android:src="@drawable/apt_2" />
+                            <ImageView android:id="@+id/fav_heart_2" style="@style/Aptly.CardHeart" />
+                        </FrameLayout>
+                        <TextView style="@style/Aptly.CardTitle" android:text="Apartment in Trancoville" />
+                        <LinearLayout style="@style/Aptly.CardInfoRow">
+                            <TextView style="@style/Aptly.CardSubtitle" android:text="Busseng, Homes" />
+                            <TextView style="@style/Aptly.CardRating" android:text="★ 4.75" />
+                        </LinearLayout>
+                        <TextView android:id="@+id/fav_price_2" style="@style/Aptly.CardPrice" android:text="₱12,000/mo · 2 bedrooms" />
+                    </LinearLayout>
+                    <!-- Empty right half: shown only when this row has a single favorite -->
+                    <View android:id="@+id/fav_spacer_1" style="@style/Aptly.Card" android:layout_height="1dp" android:layout_marginStart="16dp" android:visibility="gone" />
+                </LinearLayout>
+
+                <!-- Row 2 -->
+                <LinearLayout android:id="@+id/fav_row_2" style="@style/Aptly.CardRow">
+                    <!-- Favorite 3: Leonila Hill -->
+                    <LinearLayout
+                        android:id="@+id/fav_card_3"
+                        style="@style/Aptly.Card">
+                        <FrameLayout style="@style/Aptly.CardPhotoFrame">
+                            <ImageView android:id="@+id/fav_photo_3" style="@style/Aptly.CardPhoto" android:src="@drawable/apt_3" />
+                            <ImageView android:id="@+id/fav_heart_3" style="@style/Aptly.CardHeart" />
+                        </FrameLayout>
+                        <TextView style="@style/Aptly.CardTitle" android:text="Apartment in Leonila Hill" />
+                        <LinearLayout style="@style/Aptly.CardInfoRow">
+                            <TextView style="@style/Aptly.CardSubtitle" android:text="24Chicken, Homes" />
+                            <TextView style="@style/Aptly.CardRating" android:text="★ 4.50" />
+                        </LinearLayout>
+                        <TextView android:id="@+id/fav_price_3" style="@style/Aptly.CardPrice" android:text="₱6,000/mo · 1 bedroom" />
+                    </LinearLayout>
+                    <!-- Favorite 4: Bayan Park -->
+                    <LinearLayout
+                        android:id="@+id/fav_card_4"
+                        style="@style/Aptly.Card"
+                        android:layout_marginStart="16dp">
+                        <FrameLayout style="@style/Aptly.CardPhotoFrame">
+                            <ImageView android:id="@+id/fav_photo_4" style="@style/Aptly.CardPhoto" android:src="@drawable/apt_4" />
+                            <ImageView android:id="@+id/fav_heart_4" style="@style/Aptly.CardHeart" />
+                        </FrameLayout>
+                        <TextView style="@style/Aptly.CardTitle" android:text="Apartment in East Bayan Park" />
+                        <LinearLayout style="@style/Aptly.CardInfoRow">
+                            <TextView style="@style/Aptly.CardSubtitle" android:text="Mommy Oni, Homes" />
+                            <TextView style="@style/Aptly.CardRating" android:text="★ 2.50" />
+                        </LinearLayout>
+                        <TextView android:id="@+id/fav_price_4" style="@style/Aptly.CardPrice" android:text="₱15,000/mo · 3 bedrooms" />
+                    </LinearLayout>
+                    <!-- Empty right half: shown only when this row has a single favorite -->
+                    <View android:id="@+id/fav_spacer_2" style="@style/Aptly.Card" android:layout_height="1dp" android:layout_marginStart="16dp" android:visibility="gone" />
+                </LinearLayout>
+
+                <!-- Row 3 -->
+                <LinearLayout android:id="@+id/fav_row_3" style="@style/Aptly.CardRow">
+                    <!-- Favorite 5: La Trinidad -->
+                    <LinearLayout
+                        android:id="@+id/fav_card_5"
+                        style="@style/Aptly.Card">
+                        <FrameLayout style="@style/Aptly.CardPhotoFrame">
+                            <ImageView android:id="@+id/fav_photo_5" style="@style/Aptly.CardPhoto" android:src="@drawable/apt_5" />
+                            <ImageView android:id="@+id/fav_heart_5" style="@style/Aptly.CardHeart" />
+                        </FrameLayout>
+                        <TextView style="@style/Aptly.CardTitle" android:text="Apartment in La Trinidad" />
+                        <LinearLayout style="@style/Aptly.CardInfoRow">
+                            <TextView style="@style/Aptly.CardSubtitle" android:text="Sakading, Homes" />
+                            <TextView style="@style/Aptly.CardRating" android:text="★ 3.00" />
+                        </LinearLayout>
+                        <TextView android:id="@+id/fav_price_5" style="@style/Aptly.CardPrice" android:text="₱7,000/mo · 2 bedrooms" />
+                    </LinearLayout>
+                    <!-- Favorite 6: Gov. Pack -->
+                    <LinearLayout
+                        android:id="@+id/fav_card_6"
+                        style="@style/Aptly.Card"
+                        android:layout_marginStart="16dp">
+                        <FrameLayout style="@style/Aptly.CardPhotoFrame">
+                            <ImageView android:id="@+id/fav_photo_6" style="@style/Aptly.CardPhoto" android:src="@drawable/apt_6" />
+                            <ImageView android:id="@+id/fav_heart_6" style="@style/Aptly.CardHeart" />
+                        </FrameLayout>
+                        <TextView style="@style/Aptly.CardTitle" android:text="Apartment in Gov. Pack" />
+                        <LinearLayout style="@style/Aptly.CardInfoRow">
+                            <TextView style="@style/Aptly.CardSubtitle" android:text="Padungking, Homes" />
+                            <TextView style="@style/Aptly.CardRating" android:text="★ 4.00" />
+                        </LinearLayout>
+                        <TextView android:id="@+id/fav_price_6" style="@style/Aptly.CardPrice" android:text="₱10,000/mo · 2 bedrooms" />
+                    </LinearLayout>
+                    <!-- Empty right half: shown only when this row has a single favorite -->
+                    <View android:id="@+id/fav_spacer_3" style="@style/Aptly.Card" android:layout_height="1dp" android:layout_marginStart="16dp" android:visibility="gone" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Shown when no apartment is hearted -->
+            <TextView
+                android:id="@+id/txt_no_favorites"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingTop="80dp"
+                android:text="No favorites yet.&#10;Tap the heart on an apartment to save it here."
+                android:textColor="@color/text_gray"
+                android:textSize="13sp"
+                android:visibility="gone" />
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bottom navigation (Favorites selected) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="68dp"
+        android:layout_gravity="bottom"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginBottom="18dp"
+        android:background="@drawable/bg_nav"
+        android:elevation="6dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="5dp"
+        android:paddingEnd="6dp">
+
+        <LinearLayout android:id="@+id/nav_explore" style="@style/Aptly.NavItem">
+            <ImageView style="@style/Aptly.NavIcon" android:contentDescription="@null"
+                android:src="@drawable/ic_nav_explore" />
+            <TextView style="@style/Aptly.NavLabel" android:text="Explore" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/nav_favorites"
+            android:layout_width="74dp"
+            android:layout_height="60dp"
+            android:background="@drawable/bg_nav_selected"
+            android:gravity="center"
+            android:orientation="vertical">
+            <ImageView style="@style/Aptly.NavIcon" android:contentDescription="@null"
+                android:src="@drawable/ic_nav_favorites" android:tint="@color/white" />
+            <TextView style="@style/Aptly.NavLabel" android:text="Favorites"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+        <LinearLayout android:id="@+id/nav_messages" style="@style/Aptly.NavItem">
+            <ImageView style="@style/Aptly.NavIcon" android:contentDescription="@null"
+                android:src="@drawable/ic_nav_messages" />
+            <TextView style="@style/Aptly.NavLabel" android:text="Messages" />
+        </LinearLayout>
+
+        <LinearLayout android:id="@+id/nav_profile" style="@style/Aptly.NavItem">
+            <ImageView style="@style/Aptly.NavIcon" android:contentDescription="@null"
+                android:src="@drawable/ic_nav_profile" />
+            <TextView style="@style/Aptly.NavLabel" android:text="Profile" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

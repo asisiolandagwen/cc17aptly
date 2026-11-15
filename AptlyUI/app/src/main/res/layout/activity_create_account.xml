@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Screen 4: Create Account -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:paddingStart="47dp"
+        android:paddingTop="24dp"
+        android:paddingEnd="47dp"
+        android:paddingBottom="24dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Let\'s create your account"
+            android:textColor="@color/green_dark"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            style="@style/Aptly.Label"
+            android:layout_marginTop="36dp"
+            android:text="First name" />
+
+        <EditText
+            android:id="@+id/input_first_name"
+            style="@style/Aptly.Input"
+            android:inputType="textPersonName|textCapWords" />
+
+        <TextView
+            style="@style/Aptly.Label"
+            android:layout_marginTop="8dp"
+            android:text="Last name" />
+
+        <EditText
+            android:id="@+id/input_last_name"
+            style="@style/Aptly.Input"
+            android:inputType="textPersonName|textCapWords" />
+
+        <TextView
+            style="@style/Aptly.Label"
+            android:layout_marginTop="40dp"
+            android:text="Email Address" />
+
+        <EditText
+            android:id="@+id/input_email"
+            style="@style/Aptly.Input"
+            android:inputType="textEmailAddress" />
+
+        <TextView
+            style="@style/Aptly.Label"
+            android:layout_marginTop="8dp"
+            android:text="Password" />
+
+        <EditText
+            android:id="@+id/input_password"
+            style="@style/Aptly.Input"
+            android:inputType="textPassword" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/check_terms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@drawable/checkbox_selector"
+                android:checked="true"
+                android:paddingStart="8dp"
+                android:text="Agree with "
+                android:textColor="@color/text_black"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/link_terms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="6dp"
+                android:paddingBottom="6dp"
+                android:text="@string/terms_link"
+                android:textColor="@color/button_green"
+                android:textSize="10sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_continue"
+            style="@style/Aptly.Button"
+            android:layout_marginTop="58dp"
+            android:text="Continue" />
+    </LinearLayout>
+</ScrollView>

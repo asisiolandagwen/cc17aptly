@@ -1,0 +1,41 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.aptly.app'
+    compileSdk 35
+
+    defaultConfig {
+        applicationId "com.aptly.app"
+        minSdk 24
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    // >>> Put your group number here. The APK will be named "GROUP <number> UI.apk"
+    def groupNumber = "MADD8"
+    applicationVariants.all { variant ->
+        variant.outputs.all {
+            outputFileName = "GROUP ${groupNumber} UI.apk"
+        }
+    }
+}
+
+// No external libraries: the UI uses only the Android framework,
+// so the project builds without downloading extra dependencies.
+dependencies {
+}

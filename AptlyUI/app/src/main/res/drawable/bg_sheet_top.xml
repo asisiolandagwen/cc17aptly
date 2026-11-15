@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Details screen: content sheet with rounded top corners, overlapping the photo -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/white" />
+    <corners android:topLeftRadius="22dp" android:topRightRadius="22dp" />
+</shape>

@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="Theme.Aptly" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:colorPrimary">@color/button_green</item>
+        <item name="android:colorAccent">@color/button_green</item>
+        <item name="android:windowBackground">@color/background</item>
+        <item name="android:statusBarColor">@color/background</item>
+        <item name="android:navigationBarColor">@color/background</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:textColorPrimary">@color/text_black</item>
+    </style>
+
+    <!-- Logo screen draws behind the status bar so the background fills the screen -->
+    <style name="Theme.Aptly.Logo" parent="Theme.Aptly">
+        <item name="android:windowBackground">@drawable/splash_background</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+
+    <!-- Welcome screen: white, like the prototype -->
+    <style name="Theme.Aptly.Welcome" parent="Theme.Aptly">
+        <item name="android:windowBackground">@color/white</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+
+    <!-- Apartment details: photo goes behind a transparent status bar -->
+    <style name="Theme.Aptly.Details" parent="Theme.Aptly">
+        <item name="android:windowBackground">@color/white</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@color/white</item>
+    </style>
+
+    <style name="Aptly" />
+
+    <style name="Aptly.Label">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">5dp</item>
+        <item name="android:textColor">@color/text_black</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="Aptly.Input">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">42dp</item>
+        <item name="android:background">@drawable/bg_input</item>
+        <item name="android:elevation">2dp</item>
+        <item name="android:paddingStart">12dp</item>
+        <item name="android:paddingEnd">12dp</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/text_black</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="Aptly.Button">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">42dp</item>
+        <item name="android:background">@drawable/bg_button</item>
+        <item name="android:elevation">3dp</item>
+        <item name="android:stateListAnimator">@null</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Aptly.NavItem">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:gravity">center</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+    </style>
+
+    <style name="Aptly.NavIcon">
+        <item name="android:layout_width">23dp</item>
+        <item name="android:layout_height">23dp</item>
+        <item name="android:tint">@color/nav_icon</item>
+    </style>
+
+    <style name="Aptly.NavLabel">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">4dp</item>
+        <item name="android:textColor">@color/nav_icon</item>
+        <item name="android:textSize">10sp</item>
+    </style>
+
+    <style name="Aptly.ProfileRow">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">63dp</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:paddingStart">10dp</item>
+        <item name="android:paddingEnd">13dp</item>
+        <item name="android:paddingTop">21dp</item>
+    </style>
+
+    <style name="Aptly.ProfileLabel">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/text_black</item>
+        <item name="android:textSize">13sp</item>
+    </style>
+
+    <style name="Aptly.ProfileValue">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">4dp</item>
+        <item name="android:textColor">@color/text_gray</item>
+        <item name="android:textSize">11sp</item>
+    </style>
+
+    <style name="Aptly.ProfileEdit">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:text">Edit</item>
+        <item name="android:textColor">@color/text_black</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Aptly.Divider">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1.5dp</item>
+        <item name="android:background">@color/divider</item>
+    </style>
+    <style name="Aptly.TermsHeading">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">14dp</item>
+        <item name="android:textColor">@color/text_black</item>
+        <item name="android:textSize">11.5sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="Aptly.TermsBody">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:lineSpacingMultiplier">1.1</item>
+        <item name="android:textColor">@color/text_black</item>
+        <item name="android:textSize">11.5sp</item>
+    </style>
+    <!-- One star (rate.png) in a row of 5 on the Apartment details screen -->
+    <style name="Aptly.Star">
+        <item name="android:layout_width">12dp</item>
+        <item name="android:layout_height">12dp</item>
+        <item name="android:layout_marginEnd">2dp</item>
+        <item name="android:contentDescription">@null</item>
+        <item name="android:scaleType">fitCenter</item>
+        <item name="android:src">@drawable/rate</item>
+    </style>
+
+    <!-- ===== Messages tab / Chat ===== -->
+    <!-- Letter avatar: colored circle with the first letter of the name -->
+    <style name="Aptly.AvatarLetter">
+        <item name="android:background">@drawable/bg_avatar_circle</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Aptly.ConvRow">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">?android:attr/selectableItemBackground</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="Aptly.ConvName">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">@color/text_black</item>
+        <item name="android:textSize">13sp</item>
+    </style>
+
+    <style name="Aptly.ConvDate">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">8dp</item>
+        <item name="android:textColor">@color/text_black</item>
+        <item name="android:textSize">9sp</item>
+    </style>
+
+    <style name="Aptly.ConvLast">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">@color/text_black</item>
+        <item name="android:textSize">10sp</item>
+    </style>
+
+    <style name="Aptly.ConvDivider">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:layout_marginStart">42dp</item>
+        <item name="android:background">#D6DCD8</item>
+    </style>
+
+    <!-- Green chat bubble for messages the user sent -->
+    <style name="Aptly.ChatBubble">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">end</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:background">@drawable/bg_chat_bubble</item>
+        <item name="android:maxWidth">250dp</item>
+        <item name="android:paddingStart">10dp</item>
+        <item name="android:paddingTop">6dp</item>
+        <item name="android:paddingEnd">10dp</item>
+        <item name="android:paddingBottom">6dp</item>
+        <item name="android:textColor">@color/text_black</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <!-- ===== Filters screen ===== -->
+    <style name="Aptly.FilterSection">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/text_black</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Aptly.FilterSmallLabel">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">6dp</item>
+        <item name="android:textColor">@color/text_black</item>
+        <item name="android:textSize">11sp</item>
+    </style>
+
+    <style name="Aptly.FilterInput">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:background">@drawable/bg_input_outline</item>
+        <item name="android:inputType">number</item>
+        <item name="android:maxLength">7</item>
+        <item name="android:paddingStart">10dp</item>
+        <item name="android:paddingEnd">10dp</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">@color/text_black</item>
+        <item name="android:textSize">13sp</item>
+    </style>
+
+    <style name="Aptly.FilterOption">
+        <item name="android:layout_height">40dp</item>
+        <item name="android:background">@drawable/bg_option</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/text_black</item>
+        <item name="android:textSize">11.5sp</item>
+    </style>
+
+    <style name="Aptly.FilterCheck">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">11dp</item>
+        <item name="android:button">@drawable/checkbox_filter_selector</item>
+        <item name="android:minHeight">0dp</item>
+        <item name="android:paddingStart">8dp</item>
+        <item name="android:textColor">@color/text_black</item>
+        <item name="android:textSize">11.5sp</item>
+    </style>
+
+    <!-- ===== Dashboard cards ===== -->
+    <style name="Aptly.CardRow">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="Aptly.Card">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="Aptly.CardPhotoFrame">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">136dp</item>
+    </style>
+
+    <style name="Aptly.CardPhoto">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@drawable/bg_card_photo</item>
+        <item name="android:clipToOutline" tools:targetApi="31">true</item>
+        <item name="android:contentDescription">@null</item>
+        <item name="android:scaleType">centerCrop</item>
+    </style>
+
+    <style name="Aptly.CardHeart">
+        <item name="android:layout_width">32dp</item>
+        <item name="android:layout_height">32dp</item>
+        <item name="android:layout_gravity">top|end</item>
+        <item name="android:layout_marginTop">2dp</item>
+        <item name="android:layout_marginEnd">2dp</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:contentDescription">Favorite</item>
+        <item name="android:src">@drawable/ic_nav_favorites</item>
+        <item name="android:tint">#222222</item>
+    </style>
+
+    <style name="Aptly.CardTitle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">9dp</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:textColor">@color/text_black</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Aptly.CardInfoRow">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">1dp</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="Aptly.CardSubtitle">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:textColor">#333333</item>
+        <item name="android:textSize">10sp</item>
+    </style>
+
+    <!-- Gray price line under each Dashboard card -->
+    <style name="Aptly.CardPrice">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/text_gray</item>
+        <item name="android:textSize">10sp</item>
+    </style>
+
+    <style name="Aptly.CardRating">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#333333</item>
+        <item name="android:textSize">10sp</item>
+    </style>
+</resources>

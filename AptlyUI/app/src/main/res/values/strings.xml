@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Apt.ly</string>
+    <!-- Error messages on the Sign In and Create Account screens -->
+    <string name="error_email">Enter your email address</string>
+    <string name="error_password">Enter your password</string>
+    <string name="error_first_name">Enter your first name</string>
+    <string name="error_last_name">Enter your last name</string>
+    <string name="error_new_password">Enter a password</string>
+    <string name="error_agree_terms">Please agree to the Terms &amp; Conditions</string>
+
+    <!-- Error messages on the question steps (Price range, Bedrooms, Furnishing, Lease type, Pets) -->
+    <string name="error_min">Enter a minimum</string>
+    <string name="error_max">Enter a maximum</string>
+    <string name="error_max_below_min">Max must be higher than Min</string>
+    <string name="error_bedrooms">Enter the number of bedrooms</string>
+    <string name="error_bedrooms_min">Enter at least 1</string>
+    <string name="error_choose_one">Please choose one</string>
+    <string name="error_choose_at_least_one">Please choose at least one</string>
+
+    <!-- Dashboard search box -->
+    <string name="search_apartments">Search apartments, areas, hosts</string>
+
+    <!-- Dashboard filter results -->
+    <string name="no_apartments_match">No apartments match your search or filters.\nTry changing or clearing them.</string>
+    <plurals name="results_count">
+        <item quantity="one">%d result</item>
+        <item quantity="other">%d results</item>
+    </plurals>
+
+    <!-- Messages tab: the two starting conversations (used by activity_messages.xml and Conversation.java) -->
+    <string name="chat_banana_man">Banana Man</string>
+    <string name="chat_strawberry_girl">Strawberry Girl</string>
+    <string name="chat_start_date">06/07/2026</string>
+    <string name="chat_first_message">Hi, can I do early check-in?</string>
+    <string name="no_names_match">No names match \"%s\"</string>
+    <!-- Line under the name when chatting with an apartment host, e.g. "Host · Apartment in Bayan Park" -->
+    <string name="chat_host_subtitle">Host · %s</string>
+
+    <!-- Apartment details: stars a guest gave, e.g. "3 out of 5" -->
+    <string name="review_score">%d out of 5</string>
+
+    <!-- Profile: the user's starting details (used by activity_profile.xml, activity_edit_profile.xml and UserProfile.java) -->
+    <string name="profile_name">Skibidi Rizz Gyatt</string>
+    <string name="profile_phone">+67 676 767 6767</string>
+    <string name="profile_email">skibidiRizzGyatt@malupiton.com</string>
+    <string name="profile_address">Edi sa Puso Mo!</string>
+
+    <!-- Edit Profile: label above the text box, depending on which Edit was tapped -->
+    <string name="label_legal_name">Legal Name</string>
+    <string name="label_phone">Phone Number</string>
+    <string name="label_email">Email Address</string>
+    <string name="label_address">Address</string>
+
+    <!-- Edit Profile: error messages -->
+    <string name="error_empty">This can\'t be empty</string>
+    <string name="error_phone">Enter a valid phone number</string>
+    <string name="error_email_invalid">Enter a valid email address</string>
+
+    <string name="terms_link"><u>Terms &amp; Conditions</u></string>
+
+</resources>

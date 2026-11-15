@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Screen 11e: MESSAGES tab -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- Title -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="56dp"
+            android:gravity="center"
+            android:text="Messages"
+            android:textColor="@color/text_black"
+            android:textSize="17sp" />
+
+        <!-- Search box: filters the list by name -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/bg_search_bar"
+            android:elevation="3dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp">
+
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_nav_explore"
+                android:tint="#222222" />
+
+            <EditText
+                android:id="@+id/input_search"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:background="@null"
+                android:hint="Search names"
+                android:imeOptions="actionSearch"
+                android:inputType="textPersonName"
+                android:singleLine="true"
+                android:textColor="@color/text_black"
+                android:textColorHint="@color/text_light"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <!-- Conversation list. The search box hides rows whose name doesn't match.
+             New chats (e.g. with an apartment host) are added on top using item_conversation.xml. -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="14dp"
+            android:layout_weight="1"
+            android:clipToPadding="false"
+            android:paddingBottom="110dp"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:id="@+id/list_conversations"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingStart="30dp"
+                android:paddingEnd="30dp">
+
+                <!-- Row: Banana Man -->
+                <LinearLayout
+                    android:id="@+id/row_banana_man"
+                    style="@style/Aptly.ConvRow">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingTop="14dp"
+                        android:paddingBottom="14dp">
+
+                        <TextView
+                            android:id="@+id/txt_avatar"
+                            style="@style/Aptly.AvatarLetter"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:backgroundTint="#F2C94C"
+                            android:text="B"
+                            android:textSize="14sp" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/txt_name"
+                                    style="@style/Aptly.ConvName"
+                                    android:text="@string/chat_banana_man" />
+
+                                <TextView
+                                    android:id="@+id/txt_date"
+                                    style="@style/Aptly.ConvDate"
+                                    android:text="@string/chat_start_date" />
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/txt_last_message"
+                                style="@style/Aptly.ConvLast"
+                                android:text="@string/chat_first_message" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <View style="@style/Aptly.ConvDivider" />
+                </LinearLayout>
+
+                <!-- Row: Strawberry Girl -->
+                <LinearLayout
+                    android:id="@+id/row_strawberry_girl"
+                    style="@style/Aptly.ConvRow">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingTop="14dp"
+                        android:paddingBottom="14dp">
+
+                        <TextView
+                            android:id="@+id/txt_avatar"
+                            style="@style/Aptly.AvatarLetter"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:backgroundTint="#E57373"
+                            android:text="S"
+                            android:textSize="14sp" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/txt_name"
+                                    style="@style/Aptly.ConvName"
+                                    android:text="@string/chat_strawberry_girl" />
+
+                                <TextView
+                                    android:id="@+id/txt_date"
+                                    style="@style/Aptly.ConvDate"
+                                    android:text="@string/chat_start_date" />
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/txt_last_message"
+                                style="@style/Aptly.ConvLast"
+                                android:text="@string/chat_first_message" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <View style="@style/Aptly.ConvDivider" />
+                </LinearLayout>
+
+                <!-- Shown by the search box when no name matches -->
+                <TextView
+                    android:id="@+id/txt_no_results"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingTop="40dp"
+                    android:text="No names match"
+                    android:textColor="@color/text_gray"
+                    android:textSize="13sp"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <!-- Bottom navigation (Messages selected) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="68dp"
+        android:layout_gravity="bottom"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginBottom="18dp"
+        android:background="@drawable/bg_nav"
+        android:elevation="6dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="5dp"
+        android:paddingEnd="6dp">
+
+        <LinearLayout android:id="@+id/nav_explore" style="@style/Aptly.NavItem">
+            <ImageView style="@style/Aptly.NavIcon" android:contentDescription="@null"
+                android:src="@drawable/ic_nav_explore" />
+            <TextView style="@style/Aptly.NavLabel" android:text="Explore" />
+        </LinearLayout>
+
+        <LinearLayout android:id="@+id/nav_favorites" style="@style/Aptly.NavItem">
+            <ImageView style="@style/Aptly.NavIcon" android:contentDescription="@null"
+                android:src="@drawable/ic_nav_favorites" />
+            <TextView style="@style/Aptly.NavLabel" android:text="Favorites" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/nav_messages"
+            android:layout_width="74dp"
+            android:layout_height="60dp"
+            android:background="@drawable/bg_nav_selected"
+            android:gravity="center"
+            android:orientation="vertical">
+            <ImageView style="@style/Aptly.NavIcon" android:contentDescription="@null"
+                android:src="@drawable/ic_nav_messages" android:tint="@color/white" />
+            <TextView style="@style/Aptly.NavLabel" android:text="Messages"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+        <LinearLayout android:id="@+id/nav_profile" style="@style/Aptly.NavItem">
+            <ImageView style="@style/Aptly.NavIcon" android:contentDescription="@null"
+                android:src="@drawable/ic_nav_profile" />
+            <TextView style="@style/Aptly.NavLabel" android:text="Profile" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

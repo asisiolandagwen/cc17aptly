@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Outlined rounded pill (Filters "See results" button) -->
+<ripple xmlns:android="http://schemas.android.com/apk/res/android" android:color="#220E7448">
+    <item>
+        <shape>
+            <solid android:color="@color/background" />
+            <stroke android:width="1dp" android:color="#333333" />
+            <corners android:radius="100dp" />
+        </shape>
+    </item>
+</ripple>

@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Screen 11c: Filters (opened from the Dashboard filter icon) -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <!-- Header: back arrow, title, Reset (stays at the top while scrolling) -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:paddingStart="18dp"
+        android:paddingEnd="22dp">
+
+        <ImageView
+            android:id="@+id/btn_back"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="start|center_vertical"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Back"
+            android:padding="9dp"
+            android:src="@drawable/ic_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Filters"
+            android:textColor="@color/text_black"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/btn_reset"
+            android:layout_width="wrap_content"
+            android:layout_height="34dp"
+            android:layout_gravity="end|center_vertical"
+            android:background="@drawable/bg_pill_green"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:text="Reset"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+    </FrameLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="32dp"
+            android:paddingTop="18dp"
+            android:paddingEnd="32dp"
+            android:paddingBottom="40dp">
+
+            <!-- Price range -->
+            <TextView
+                style="@style/Aptly.FilterSection"
+                android:text="Price range" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/Aptly.FilterSmallLabel"
+                        android:text="Min" />
+
+                    <EditText
+                        android:id="@+id/input_price_min"
+                        style="@style/Aptly.FilterInput" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="19dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/Aptly.FilterSmallLabel"
+                        android:text="Max" />
+
+                    <EditText
+                        android:id="@+id/input_price_max"
+                        style="@style/Aptly.FilterInput" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Bedrooms -->
+            <TextView
+                style="@style/Aptly.FilterSection"
+                android:layout_marginTop="26dp"
+                android:text="Bedrooms" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/Aptly.FilterSmallLabel"
+                        android:text="Min" />
+
+                    <EditText
+                        android:id="@+id/input_bedrooms_min"
+                        style="@style/Aptly.FilterInput"
+                        android:maxLength="2" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="19dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/Aptly.FilterSmallLabel"
+                        android:text="Max" />
+
+                    <EditText
+                        android:id="@+id/input_bedrooms_max"
+                        style="@style/Aptly.FilterInput"
+                        android:maxLength="2" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Furnishing type (choose one) -->
+            <TextView
+                style="@style/Aptly.FilterSection"
+                android:layout_marginTop="38dp"
+                android:text="Furnishing type" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/option_unfurnished"
+                    style="@style/Aptly.FilterOption"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="Unfurnished" />
+
+                <TextView
+                    android:id="@+id/option_semi_furnished"
+                    style="@style/Aptly.FilterOption"
+                    android:layout_width="0dp"
+                    android:layout_marginStart="19dp"
+                    android:layout_weight="1"
+                    android:text="Semi-furnished" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/option_fully_furnished"
+                style="@style/Aptly.FilterOption"
+                android:layout_width="match_parent"
+                android:layout_marginTop="12dp"
+                android:text="Fully furnished" />
+
+            <!-- Pets (choose one) -->
+            <TextView
+                style="@style/Aptly.FilterSection"
+                android:layout_marginTop="38dp"
+                android:text="Pets" />
+
+            <TextView
+                android:id="@+id/option_pets_allowed"
+                style="@style/Aptly.FilterOption"
+                android:layout_width="match_parent"
+                android:layout_marginTop="12dp"
+                android:text="Pets allowed" />
+
+            <TextView
+                android:id="@+id/option_no_pets"
+                style="@style/Aptly.FilterOption"
+                android:layout_width="match_parent"
+                android:layout_marginTop="12dp"
+                android:text="No pets allowed" />
+
+            <!-- Others -->
+            <TextView
+                style="@style/Aptly.FilterSection"
+                android:layout_marginTop="38dp"
+                android:text="Others" />
+
+            <CheckBox
+                android:id="@+id/check_parking"
+                style="@style/Aptly.FilterCheck"
+                android:text="Must have on-site parking area" />
+
+            <!-- Lease type (pick any) -->
+            <TextView
+                style="@style/Aptly.FilterSection"
+                android:layout_marginTop="26dp"
+                android:text="Lease Type" />
+
+            <CheckBox
+                android:id="@+id/check_short_term"
+                style="@style/Aptly.FilterCheck"
+                android:text="Short-term contract" />
+
+            <CheckBox
+                android:id="@+id/check_long_term"
+                style="@style/Aptly.FilterCheck"
+                android:text="Long-term contract" />
+
+            <CheckBox
+                android:id="@+id/check_month_to_month"
+                style="@style/Aptly.FilterCheck"
+                android:text="Month-to-Month contract" />
+
+            <CheckBox
+                android:id="@+id/check_fixed_term"
+                style="@style/Aptly.FilterCheck"
+                android:text="Fixed-Term contract" />
+
+            <CheckBox
+                android:id="@+id/check_lease_to_own"
+                style="@style/Aptly.FilterCheck"
+                android:text="Lease-to-Own contract" />
+
+            <!-- See results -->
+            <TextView
+                android:id="@+id/btn_see_results"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="44dp"
+                android:background="@drawable/bg_pill_outline"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:text="See results"
+                android:textColor="@color/text_black"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
